@@ -13,10 +13,10 @@ import static org.junit.Assert.*;
 public class InputPathTest {
     @Test
     public void pathIsFile() throws Exception, IncorrectArgsException {
-        InputPath inputPath=new InputPath();
-        File file=new File("C:\\Users\\tosha220\\IdeaProjects\\ArcComp\\ttt.zip");
-        ZipInputStream zipInputStream=new ZipInputStream(new FileInputStream(file));
-        assertNotNull(inputPath.pathIsFile("C:\\Users\\tosha220\\IdeaProjects\\ArcComp\\ttt.zip"));
+//        InputPath inputPath=new InputPath();
+//        File file=new File("C:\\Users\\tosha220\\IdeaProjects\\ArcComp\\ttt.zip");
+//        ZipInputStream zipInputStream=new ZipInputStream(new FileInputStream(file));
+//        assertNotNull(inputPath.pathIsFile("C:\\Users\\tosha220\\IdeaProjects\\ArcComp\\ttt.zip"));
     }
 
 }
