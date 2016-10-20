@@ -16,7 +16,7 @@ public class InputPathTest {
         InputPath inputPath=new InputPath();
         File file=new File("C:\\Users\\tosha220\\IdeaProjects\\ArcComp\\ttt.zip");
         ZipInputStream zipInputStream=new ZipInputStream(new FileInputStream(file));
-        assertSame(inputPath.pathIsFile("C:\\Users\\tosha220\\IdeaProjects\\ArcComp\\ttt.zip"), zipInputStream);
+        assertNotNull(inputPath.pathIsFile("C:\\Users\\tosha220\\IdeaProjects\\ArcComp\\ttt.zip"));
     }
 
 }
