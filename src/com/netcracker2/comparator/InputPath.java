@@ -7,10 +7,10 @@ import java.util.zip.ZipInputStream;
 
 public class InputPath {
 
-    private ZipInputStream zis;
+    public ZipInputStream zis;
     private File file;
 
-    public ZipInputStream pathIsFile(String pathToArc) throws IncorrectArgsException, FileNotFoundException, NullPointerException {
+    public ZipInputStream pathIsFile(String pathToArc) throws IncorrectArgsException, FileNotFoundException {
 
         file = new File(pathToArc);
 
