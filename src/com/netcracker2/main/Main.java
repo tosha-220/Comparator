@@ -9,7 +9,7 @@ import com.netcracker2.frame.PathFrame;
 import com.netcracker2.writer.WriterDotTxt;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.HashMap;
+import java.util.Map;
 
 public class Main {
 
@@ -20,8 +20,8 @@ public class Main {
         String firstFileName = null;
         String secondFileName = null;
         PathFrame chooser;
-        HashMap<String, Long> firstZip;
-        HashMap<String, Long> secondZip;
+        Map<String, Long> firstZip;
+        Map<String, Long> secondZip;
         InputPath inputPath1 = new InputPath();
         InputPath inputPath2 = new InputPath();
         Unpacking unpackFirstZip = new Unpacking();

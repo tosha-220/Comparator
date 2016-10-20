@@ -7,7 +7,7 @@ import java.util.zip.ZipInputStream;
 
 public class InputPath {
 
-    public ZipInputStream zis;
+    private ZipInputStream zis;
     private File file;
 
     public ZipInputStream pathIsFile(String pathToArc) throws IncorrectArgsException, FileNotFoundException {

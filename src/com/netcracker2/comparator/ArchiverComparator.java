@@ -7,7 +7,7 @@ public class ArchiverComparator {
     private ArrayList<String> list1 = new ArrayList<>();
     private ArrayList<String> list2 = new ArrayList<>();
 
-    public ArrayList<String> compareFirstToSecond(final HashMap<String, Long> first, final HashMap<String, Long> second) {
+    public ArrayList<String> compareFirstToSecond(final Map<String, Long> first, final Map<String, Long> second) {
         for (Map.Entry<String, Long> maps : first.entrySet()) {
             if (second.containsKey(maps.getKey()) && !second.containsValue(maps.getValue())) {
                 list1.add("modified" + " " + maps.getKey());
@@ -20,7 +20,7 @@ public class ArchiverComparator {
         return sort(list1);
     }
 
-    public ArrayList<String> compareSecondToFirst(final HashMap<String, Long> first, final HashMap<String, Long> second) {
+    public ArrayList<String> compareSecondToFirst(final Map<String, Long> first, final Map<String, Long> second) {
 
         for (Map.Entry<String, Long> maps : second.entrySet()) {
             if (!first.containsKey(maps.getKey()) && !first.containsValue(maps.getValue())) {
