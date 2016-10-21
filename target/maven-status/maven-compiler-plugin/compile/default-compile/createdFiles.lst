@@ -1,9 +1,0 @@
-com\netcracker2\corparatorExceptions\EmptyArchiveException.class
-com\netcracker2\main\Main.class
-com\netcracker2\writer\WriterDotTxt.class
-com\netcracker2\comparator\InputPath.class
-com\netcracker2\frame\PathFrame.class
-com\netcracker2\corparatorExceptions\IncorrectArgsException.class
-com\netcracker2\TextOutput\TextToScreen.class
-com\netcracker2\comparator\ArchiverComparator.class
-com\netcracker2\comparator\Unpacking.class
