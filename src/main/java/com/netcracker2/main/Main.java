@@ -44,10 +44,10 @@ public class Main {
 
             } else if (args.length == 2) {
 
-                path1 = args[0];
+                path1 = replacingSlash(args[0]);
                 firstFileName = pathToName(path1);
                 toScreen.printFileName(firstFileName);
-                path2 = args[1];
+                path2 = replacingSlash(args[1]);
                 secondFileName = pathToName(path2);
                 toScreen.printFileName(secondFileName);
             }
@@ -62,18 +62,18 @@ public class Main {
             writer.line();
             writer.writer(comparator.compareSecondToFirst(firstZip, secondZip));
             writer.flush();
-            toScreen.finish();
+            toScreen.finish(path1);
         } catch (FileNotFoundException e) {
             toScreen.accessDenied();
         } catch (NullPointerException e) {
+            e.printStackTrace();
             toScreen.cancel();
         } catch (IOException e) {
             e.printStackTrace();
             throw new RuntimeException();
         } catch (IncorrectArgsException e) {
             toScreen.incorrectArgs();
-        }
-        finally {
+        } finally {
             System.exit(0);
         }
 
@@ -81,5 +81,12 @@ public class Main {
 
     private static String pathToName(String path) {
         return path.substring(path.lastIndexOf('\\') + 1, path.length());
+    }
+
+    private static String replacingSlash(String path) {
+        if (path.contains("/")) {
+            path = path.replace('/', '\\');
+        }
+        return path;
     }
 }

@@ -15,8 +15,8 @@ public class TextToScreen {
         System.out.println("Cancelled.");
     }
 
-    public void finish() {
-        System.out.println("Find the result of comparing two archives on the path of the first archive in text.txt.");
+    public void finish(String exitPath) {
+        System.out.println("Find the result of comparing two archives in " +exitPath.substring(0, exitPath.lastIndexOf('\\') + 1) + "text.txt");
     }
 
     public void accessDenied() {

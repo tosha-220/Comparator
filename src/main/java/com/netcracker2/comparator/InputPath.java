@@ -1,6 +1,7 @@
 package com.netcracker2.comparator;
 
 import com.netcracker2.corparatorExceptions.IncorrectArgsException;
+
 import java.io.*;
 import java.util.zip.ZipInputStream;
 
@@ -11,9 +12,12 @@ public class InputPath {
     private File file;
 
     public ZipInputStream pathIsFile(String pathToArc) throws IncorrectArgsException, FileNotFoundException {
-
-        file = new File(pathToArc);
-
+        try {
+            file = new File(pathToArc);
+        }
+        catch (Exception e) {
+            throw new IncorrectArgsException();
+        }
         if (file.exists()) {
             pathToZis(file);
 
